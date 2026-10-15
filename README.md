@@ -8,23 +8,27 @@ A mobile learning application for teachers, students, and administrators with st
 
 Learnimal is a cross-platform mobile application built with Flutter for the Mobile App Engineering course. The app supports three user roles (Teacher, Student, Admin) with features including study session tracking (Pomodoro), classroom management, goal setting, progress monitoring, feedback collection, and administrative analytics.
 
-**My Contribution**: Teacher role implementation including login authentication, teacher dashboard, classroom management, analytics, feedback system, and student profile viewing.
+**My Contribution**: Admin features and sign-in/authentication system.
 
 ## Features
 
-### Authentication (All Roles)
-- **Login System**: Role-based authentication using Firebase
-- **Role Detection**: Automatic routing to role-specific dashboards (Teacher, Student, Admin)
+### Authentication (My Implementation)
+- **Login System**: Email/password sign-in using Firebase
+- **Role Detection**: Automatic routing to role-specific dashboards (Admin, Teacher, Student)
 - **Session Management**: Persistent login state with logout functionality
 
-### Teacher Features (My Implementation)
-- **Teacher Dashboard**: Real-time classroom overview with Pomodoro controls
-- **Classroom Management**: Select classrooms, view enrolled students, gift rewards
-- **Analytics**: Session-by-day and session-by-hour charts with KPIs
-- **Feedback System**: Send personalized feedback to students
-- **Student Profiles**: View individual student study history and session data
-- **Live Activity Feed**: Monitor which students are currently studying
-- **Pomodoro Control**: Start/stop group study sessions for the classroom
+### Admin Features (My Implementation)
+- **User Management**: Add, edit, and delete users with role assignment
+- **Subject Management**: Add, edit, and delete subjects
+- **Dashboard**: System-wide statistics and health monitoring
+- **Profile**: Admin profile viewing and management
+
+### Teacher Features
+- Dashboard with classroom overview
+- Classroom management and student enrollment
+- Analytics with session charts
+- Feedback system for students
+- Live activity feed
 
 ### Student Features
 - Dashboard with study overview
@@ -32,12 +36,6 @@ Learnimal is a cross-platform mobile application built with Flutter for the Mobi
 - Goal setting and tracking
 - Progress visualization
 - Notifications
-
-### Admin Features
-- User management
-- Subject management
-- Statistics and analytics
-- System oversight
 
 ### Firebase Integration
 - Authentication, cloud services, and real-time data
@@ -71,21 +69,21 @@ lib/
     teacher_repository.dart   — Teacher data operations
   screens/
     login_page.dart           — Authentication screen (My contribution)
-    admin_dashboard.dart      — Admin main screen
-    admin_manageSubjectsPage.dart
-    admin_manageUsersPage.dart
-    admin_profilePage.dart
-    admin_statisticsPage.dart
+    admin_dashboard.dart      — Admin main screen (My contribution)
+    admin_manageSubjectsPage.dart — Subject management (My contribution)
+    admin_manageUsersPage.dart — User management (My contribution)
+    admin_profilePage.dart    — Admin profile (My contribution)
+    admin_statisticsPage.dart — Statistics dashboard (My contribution)
     student_dashboard.dart    — Student main screen
     student_goalsPage.dart
     student_notificationsPage.dart
     student_pomodoroPage.dart
     student_progressPage.dart
-    teacher_dashboard.dart    — Teacher main screen (My contribution)
-    teacher_analytics.dart    — Analytics dashboard (My contribution)
-    teacher_classroom.dart    — Classroom management (My contribution)
-    teacher_feedback.dart     — Feedback system (My contribution)
-    teacher_studentview.dart  — Student profile viewer (My contribution)
+    teacher_dashboard.dart    — Teacher main screen
+    teacher_analytics.dart
+    teacher_classroom.dart
+    teacher_feedback.dart
+    teacher_studentview.dart
   widgets/
     student_goal_card.dart
     student_progress_bar.dart
@@ -127,16 +125,15 @@ flutter run -d android  # Android
 
 ## Usage
 
-### Login
+### Login (My Implementation)
 1. Launch the app and log in with your credentials
 2. The system detects your role and routes you to the appropriate dashboard
 
-### Teacher Workflow
-1. **Dashboard**: Select a classroom from the dropdown to view enrolled students
-2. **Analytics**: View session-by-day and session-by-hour charts with KPIs
-3. **Classroom Management**: Gift rewards to students, view student profiles
-4. **Feedback**: Send personalized feedback messages to students
-5. **Pomodoro Control**: Start group study sessions and monitor live activity
+### Admin Workflow (My Implementation)
+1. **Dashboard**: View system-wide statistics and user overview
+2. **Manage Users**: Add, edit, or delete users and assign roles
+3. **Manage Subjects**: Add, edit, or delete subjects in the system
+4. **Profile**: View and manage admin profile settings
 
 ## Screenshots
 
@@ -174,13 +171,12 @@ The app follows a repository pattern for data management:
 - Firebase Messaging for push notifications
 - Firebase configuration in `firebase_options.dart`
 
-### Teacher Role Design
+### Authentication Design
 
-The teacher role is built around real-time classroom management:
-- **Stream-based UI**: Real-time updates for student activity and session data
+The sign-in system uses Firebase for authentication:
 - **Role-based routing**: Login page routes users to role-specific dashboards
-- **Classroom-centric**: All teacher features are organized around selected classrooms
-- **Gamification**: Reward system for student engagement
+- **Session persistence**: Users stay logged in across app restarts
+- **Error handling**: Invalid credentials show appropriate error messages
 
 ## Author
 

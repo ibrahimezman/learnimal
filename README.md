@@ -155,38 +155,7 @@ flutter run -d android  # Android
 | System Health Check | ![Health Check](docs/admin-screenshots/Screenshot_1791893650.png) |
 
 
-## Screenshots
 
-### Admin Screens
-
-| Screen | Screenshot |
-|--------|------------|
-| Admin Dashboard (Manage Users) | ![Admin Dashboard](docs/admin-screenshots/Screenshot_1791893612.png) |
-| Admin Dashboard (Statistics) | ![Admin Statistics](docs/admin-screenshots/Screenshot_1791893620.png) |
-| Admin Dashboard (Manage Subjects) | ![Admin Subjects](docs/admin-screenshots/Screenshot_1791893624.png) |
-| Admin Profile | ![Admin Profile](docs/admin-screenshots/Screenshot_1791893630.png) |
-| Add/Edit User Dialog | ![Add User](docs/admin-screenshots/Screenshot_1791893633.png) |
-| Delete User Confirmation | ![Delete User](docs/admin-screenshots/Screenshot_1791893636.png) |
-| Add/Edit Subject Dialog | ![Add Subject](docs/admin-screenshots/Screenshot_1791893641.png) |
-| Delete Subject Confirmation | ![Delete Subject](docs/admin-screenshots/Screenshot_1791893645.png) |
-| System Health Check | ![Health Check](docs/admin-screenshots/Screenshot_1791893650.png) |
-
-
-## Screenshots
-
-### Admin Screens
-
-| Screen | Screenshot |
-|--------|------------|
-| Admin Dashboard (Manage Users) | ![Admin Dashboard](docs/admin-screenshots/Screenshot_1791893612.png) |
-| Admin Dashboard (Statistics) | ![Admin Statistics](docs/admin-screenshots/Screenshot_1791893620.png) |
-| Admin Dashboard (Manage Subjects) | ![Admin Subjects](docs/admin-screenshots/Screenshot_1791893624.png) |
-| Admin Profile | ![Admin Profile](docs/admin-screenshots/Screenshot_1791893630.png) |
-| Add/Edit User Dialog | ![Add User](docs/admin-screenshots/Screenshot_1791893633.png) |
-| Delete User Confirmation | ![Delete User](docs/admin-screenshots/Screenshot_1791893636.png) |
-| Add/Edit Subject Dialog | ![Add Subject](docs/admin-screenshots/Screenshot_1791893641.png) |
-| Delete Subject Confirmation | ![Delete Subject](docs/admin-screenshots/Screenshot_1791893645.png) |
-| System Health Check | ![Health Check](docs/admin-screenshots/Screenshot_1791893650.png) |
 
 ## Concepts / Design Notes
 
